@@ -1,0 +1,6 @@
+${PODS_ROOT}/Target Support Files/Pods-TiketComtestTests/Pods-TiketComtestTests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire-iOS14.1/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/Realm-iOS14.1/Realm.framework
+${BUILT_PRODUCTS_DIR}/RealmSwift-iOS14.1/RealmSwift.framework
+${BUILT_PRODUCTS_DIR}/SDWebImage-iOS14.1/SDWebImage.framework
+${BUILT_PRODUCTS_DIR}/SnapKit-iOS14.1/SnapKit.framework

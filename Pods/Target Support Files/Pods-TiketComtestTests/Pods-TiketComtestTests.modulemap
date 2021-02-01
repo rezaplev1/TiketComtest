@@ -1,0 +1,6 @@
+framework module Pods_TiketComtestTests {
+  umbrella header "Pods-TiketComtestTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

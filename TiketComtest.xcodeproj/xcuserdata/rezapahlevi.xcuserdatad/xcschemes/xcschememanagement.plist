@@ -7,7 +7,25 @@
 		<key>TiketComtest.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>6</integer>
+			<integer>13</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>1A3559D025C3E62000CD22A6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1A3559E625C3E62600CD22A6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1A3559F125C3E62600CD22A6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

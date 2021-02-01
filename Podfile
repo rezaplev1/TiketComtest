@@ -14,3 +14,10 @@ target 'TiketComtest' do
     shared_pods
 end
 
+target 'TiketComtestTests' do
+    shared_pods
+end
+
+target 'TiketComtestUITests' do
+    shared_pods
+end

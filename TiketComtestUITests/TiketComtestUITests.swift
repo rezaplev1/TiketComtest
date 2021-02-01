@@ -21,6 +21,15 @@ class TiketComtestUITests: XCTestCase {
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
+    
+    func testGoToDetailVc(){
+        //make sure your data already save to local
+            let app = XCUIApplication()
+            app.launch()
+            app.collectionViews.cells.otherElements.containing(.staticText, identifier:"Anti-Mage").element.tap()
+            app.navigationBars["All"].buttons["All"].tap()
+        
+    }
 
     func testExample() throws {
         // UI tests must launch the application that they test.
