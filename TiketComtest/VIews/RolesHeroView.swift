@@ -16,13 +16,13 @@ class RolesHeroView: UIView {
     
     var scrollX = [CGFloat]()
     var categoryButtonHeight = 0
-
+    
     private lazy var scrollView: UIScrollView = { [unowned self] in
         let sc = UIScrollView()
         sc.showsHorizontalScrollIndicator = false
         sc.delegate = self
         return sc
-        }()
+    }()
     
     lazy var titleLbl: UILabel = {
         let label = UILabel()
@@ -76,7 +76,7 @@ class RolesHeroView: UIView {
             scrollView.contentSize = CGSize(width: py, height: categoryButtonHeight + 30)
         }
     }
- 
+    
     @objc func scrollButtonAction(sender: UIButton) {
         if let nameButton = sender.titleLabel?.text {
             delegate?.didSelectedBtn(nameButton)

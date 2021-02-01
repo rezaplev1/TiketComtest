@@ -17,7 +17,6 @@ extension Double {
         let stringValue = formatter.string(from: NSNumber(value: value )) ?? "0"
         return stringValue
     }
-    
 }
 
 extension UIViewController {

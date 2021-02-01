@@ -23,7 +23,7 @@ class CoreApi : NSObject {
             
             if Constants.IS_DEBUG {
                 print("Header >>> \(String(describing: response.request?.allHTTPHeaderFields))\n")
-                print("URL Request >>> \(String(describing: response.request))\n")  // original URL request
+                print("URL Request >>> \(String(describing: response.request))\n")
                 if let requestBody = response.request?.httpBody {
                     do {
                         let json = try JSONSerialization.jsonObject(with: requestBody, options: .allowFragments) as? [String:Any]

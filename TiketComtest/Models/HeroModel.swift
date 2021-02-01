@@ -8,7 +8,6 @@
 import Foundation
 import RealmSwift
 
-
 typealias HerosModel = [HeroModel]
 
 // MARK: - HerosModel
@@ -40,7 +39,6 @@ typealias HerosModel = [HeroModel]
         case moveSpeed = "move_speed"
         case baseAttackMin = "base_attack_min"
         case baseArmor = "base_armor"
-   
     }
     
     required init(from decoder: Decoder) throws {

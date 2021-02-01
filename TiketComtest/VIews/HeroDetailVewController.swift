@@ -317,9 +317,8 @@ class HeroDetailVewController: UIViewController {
                 heroImg.sd_setImage(with: imageUrl, placeholderImage: UIImage(), options: .highPriority, completed: nil)
             }
         }
-        
-        
     }
+    
     private func mappingData() {
         heroImg.sd_imageIndicator = SDWebImageActivityIndicator.gray
         let linkImage = Constants.BASE_URL + vm.hero.img
@@ -335,5 +334,4 @@ class HeroDetailVewController: UIViewController {
         manaLbl.text = "\(vm.hero.baseMana.clean)"
         attributeLbl.text = vm.hero.primaryAttr
     }
-    
 }

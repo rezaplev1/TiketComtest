@@ -122,6 +122,7 @@ extension HeroListViewController: HeroViewModelDelegate {
     }
 }
 
+// MARK: - RolesHeroViewDelegate
 extension HeroListViewController: RolesHeroViewDelegate {
     func didSelectedBtn(_ selectedRole: String) {
         title = selectedRole

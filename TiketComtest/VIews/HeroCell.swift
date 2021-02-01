@@ -53,7 +53,6 @@ class HeroCell: UICollectionViewCell {
     
     func mappingData(_ hero: HeroModel){
         titleLbl.text = hero.localizedName
-        
         heroImg.sd_imageIndicator = SDWebImageActivityIndicator.gray
         let linkImage = Constants.BASE_URL + hero.img
         let imageUrl = URL(string: linkImage)

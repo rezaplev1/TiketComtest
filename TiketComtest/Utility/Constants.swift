@@ -13,7 +13,6 @@ struct Constants {
     static let AllRole = "All"
 }
 
-
 struct TemporaryStatic {
     static var selectedRole = "All"
 }

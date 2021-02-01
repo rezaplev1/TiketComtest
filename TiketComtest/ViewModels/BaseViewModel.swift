@@ -22,5 +22,4 @@ extension BaseViewModel: CoreApiDelegate {
     
     func failed(interFace: CoreApi, result: AnyObject) {
     }
-    
 }

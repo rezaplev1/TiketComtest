@@ -65,7 +65,6 @@ extension ServiceConfig: URLRequestConvertible {
         return urlRequest
     }
     
-    
     public func asURLRequest() throws -> URLRequest {
         switch self {
         
