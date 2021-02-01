@@ -9,7 +9,7 @@ import UIKit
 import SDWebImage
 
 class HeroCell: UICollectionViewCell {
-    lazy var menuImg: UIImageView = {
+    lazy var heroImg: UIImageView = {
         let img = UIImageView()
         img.contentMode = .scaleAspectFit
         return img
@@ -38,15 +38,15 @@ class HeroCell: UICollectionViewCell {
     }
     
     func setupView() {
-        contentView.addSubview(menuImg)
+        contentView.addSubview(heroImg)
         contentView.addSubview(titleLbl)
         
-        menuImg.snp.makeConstraints { make in
+        heroImg.snp.makeConstraints { make in
             make.top.left.right.equalTo(contentView)
         }
         
         titleLbl.snp.makeConstraints { make in
-            make.top.equalTo(menuImg.snp.bottom)
+            make.top.equalTo(heroImg.snp.bottom)
             make.bottom.left.right.equalTo(self)
         }
     }
@@ -54,9 +54,9 @@ class HeroCell: UICollectionViewCell {
     func mappingData(_ hero: HeroModel){
         titleLbl.text = hero.localizedName
         
-        menuImg.sd_imageIndicator = SDWebImageActivityIndicator.gray
+        heroImg.sd_imageIndicator = SDWebImageActivityIndicator.gray
         let linkImage = Constants.BASE_URL + hero.img
         let imageUrl = URL(string: linkImage)
-        menuImg.sd_setImage(with: imageUrl, placeholderImage: UIImage(), options: .highPriority, completed: nil)
+        heroImg.sd_setImage(with: imageUrl, placeholderImage: UIImage(), options: .highPriority, completed: nil)
     }
 }

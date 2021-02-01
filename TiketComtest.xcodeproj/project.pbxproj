@@ -49,6 +49,12 @@
 		1AD8DAD225C67C4E00F7160E /* RolesHeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8DAD125C67C4E00F7160E /* RolesHeroView.swift */; };
 		1AD8DAD325C67C4E00F7160E /* RolesHeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8DAD125C67C4E00F7160E /* RolesHeroView.swift */; };
 		1AD8DAD425C67C4E00F7160E /* RolesHeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8DAD125C67C4E00F7160E /* RolesHeroView.swift */; };
+		1AD8DAD925C6A09900F7160E /* HeroDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8DAD825C6A09900F7160E /* HeroDetailViewModel.swift */; };
+		1AD8DADA25C6A09900F7160E /* HeroDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8DAD825C6A09900F7160E /* HeroDetailViewModel.swift */; };
+		1AD8DADB25C6A09900F7160E /* HeroDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8DAD825C6A09900F7160E /* HeroDetailViewModel.swift */; };
+		1AD8DAE625C79DDE00F7160E /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8DAE525C79DDE00F7160E /* Extension.swift */; };
+		1AD8DAE725C79DDE00F7160E /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8DAE525C79DDE00F7160E /* Extension.swift */; };
+		1AD8DAE825C79DDE00F7160E /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8DAE525C79DDE00F7160E /* Extension.swift */; };
 		47224383EF10AC99BC01E6AE /* Pods_TiketComtest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 327A2380F1DA1FEBEED89C0C /* Pods_TiketComtest.framework */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +100,8 @@
 		1A4EA34F25C59DB0002A2CF3 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		1A4EA37F25C5A467002A2CF3 /* HeroCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCell.swift; sourceTree = "<group>"; };
 		1AD8DAD125C67C4E00F7160E /* RolesHeroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RolesHeroView.swift; sourceTree = "<group>"; };
+		1AD8DAD825C6A09900F7160E /* HeroDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailViewModel.swift; sourceTree = "<group>"; };
+		1AD8DAE525C79DDE00F7160E /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		327A2380F1DA1FEBEED89C0C /* Pods_TiketComtest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TiketComtest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		496CFAE1E002D9A81D0E85E6 /* Pods-TiketComtest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TiketComtest.release.xcconfig"; path = "Target Support Files/Pods-TiketComtest/Pods-TiketComtest.release.xcconfig"; sourceTree = "<group>"; };
 		A5C95B4EF3B7A4631C84CBE5 /* Pods-TiketComtest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TiketComtest.debug.xcconfig"; path = "Target Support Files/Pods-TiketComtest/Pods-TiketComtest.debug.xcconfig"; sourceTree = "<group>"; };
@@ -204,6 +212,7 @@
 			children = (
 				1A4EA30A25C412DA002A2CF3 /* HeroViewModel.swift */,
 				1A4EA34F25C59DB0002A2CF3 /* BaseViewModel.swift */,
+				1AD8DAD825C6A09900F7160E /* HeroDetailViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -233,6 +242,7 @@
 			children = (
 				1A4EA34125C59A48002A2CF3 /* Constants.swift */,
 				1A4EA34825C59A97002A2CF3 /* Helper.swift */,
+				1AD8DAE525C79DDE00F7160E /* Extension.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -442,8 +452,10 @@
 				1A4EA33B25C599F8002A2CF3 /* ServiceConfig.swift in Sources */,
 				1A3559D525C3E62000CD22A6 /* AppDelegate.swift in Sources */,
 				1A3559D725C3E62000CD22A6 /* SceneDelegate.swift in Sources */,
+				1AD8DAE625C79DDE00F7160E /* Extension.swift in Sources */,
 				1A4EA35025C59DB0002A2CF3 /* BaseViewModel.swift in Sources */,
 				1A4EA33425C59994002A2CF3 /* CoreApi.swift in Sources */,
+				1AD8DAD925C6A09900F7160E /* HeroDetailViewModel.swift in Sources */,
 				1A4EA34225C59A48002A2CF3 /* Constants.swift in Sources */,
 				1A4EA30425C412C9002A2CF3 /* HeroDetailVewController.swift in Sources */,
 				1A4EA30B25C412DA002A2CF3 /* HeroViewModel.swift in Sources */,
@@ -456,6 +468,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AD8DAE725C79DDE00F7160E /* Extension.swift in Sources */,
 				1A4EA30C25C412DA002A2CF3 /* HeroViewModel.swift in Sources */,
 				1A4EA35125C59DB0002A2CF3 /* BaseViewModel.swift in Sources */,
 				1A4EA30525C412C9002A2CF3 /* HeroDetailVewController.swift in Sources */,
@@ -467,6 +480,7 @@
 				1A4EA33C25C599F8002A2CF3 /* ServiceConfig.swift in Sources */,
 				1A4EA33525C59994002A2CF3 /* CoreApi.swift in Sources */,
 				1A4EA34A25C59A97002A2CF3 /* Helper.swift in Sources */,
+				1AD8DADA25C6A09900F7160E /* HeroDetailViewModel.swift in Sources */,
 				1A4EA32E25C597D5002A2CF3 /* RealmManager.swift in Sources */,
 				1A4EA34325C59A48002A2CF3 /* Constants.swift in Sources */,
 			);
@@ -476,6 +490,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AD8DAE825C79DDE00F7160E /* Extension.swift in Sources */,
 				1A4EA30D25C412DA002A2CF3 /* HeroViewModel.swift in Sources */,
 				1A4EA35225C59DB0002A2CF3 /* BaseViewModel.swift in Sources */,
 				1A4EA30625C412C9002A2CF3 /* HeroDetailVewController.swift in Sources */,
@@ -487,6 +502,7 @@
 				1A4EA33D25C599F8002A2CF3 /* ServiceConfig.swift in Sources */,
 				1A4EA33625C59994002A2CF3 /* CoreApi.swift in Sources */,
 				1A4EA34B25C59A97002A2CF3 /* Helper.swift in Sources */,
+				1AD8DADB25C6A09900F7160E /* HeroDetailViewModel.swift in Sources */,
 				1A4EA32F25C597D5002A2CF3 /* RealmManager.swift in Sources */,
 				1A4EA34425C59A48002A2CF3 /* Constants.swift in Sources */,
 			);
@@ -645,6 +661,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WKLV7SQ587;
 				INFOPLIST_FILE = "$(SRCROOT)/TiketComtest/Support/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -667,6 +684,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WKLV7SQ587;
 				INFOPLIST_FILE = "$(SRCROOT)/TiketComtest/Support/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

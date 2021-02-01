@@ -21,10 +21,12 @@ typealias HerosModel = [HeroModel]
     var roles = List<String>()
     @objc dynamic var img: String = ""
     @objc dynamic var icon: String = ""
-    @objc dynamic var baseHealth: Int = 0
-    @objc dynamic var baseMana: Int = 0
-    @objc dynamic var baseAttackMax: Int = 0
-    @objc dynamic var moveSpeed: Int = 0
+    @objc dynamic var baseHealth: Double = 0
+    @objc dynamic var baseMana: Double = 0
+    @objc dynamic var baseAttackMax: Double = 0
+    @objc dynamic var moveSpeed: Double = 0
+    @objc dynamic var baseAttackMin: Double = 0
+    @objc dynamic var baseArmor: Double = 0
 
     enum CodingKeys: String, CodingKey {
         case id, name
@@ -36,6 +38,8 @@ typealias HerosModel = [HeroModel]
         case baseMana = "base_mana"
         case baseAttackMax = "base_attack_max"
         case moveSpeed = "move_speed"
+        case baseAttackMin = "base_attack_min"
+        case baseArmor = "base_armor"
    
     }
     
@@ -50,10 +54,12 @@ typealias HerosModel = [HeroModel]
         roles.append(objectsIn: listRoles)
         img = try container.decode(String.self, forKey: .img)
         icon = try container.decode(String.self, forKey: .icon)
-        baseHealth = try container.decode(Int.self, forKey: .baseHealth)
-        baseMana = try container.decode(Int.self, forKey: .baseMana)
-        baseAttackMax = try container.decode(Int.self, forKey: .baseAttackMax)
-        moveSpeed = try container.decode(Int.self, forKey: .moveSpeed)
+        baseHealth = try container.decode(Double.self, forKey: .baseHealth)
+        baseMana = try container.decode(Double.self, forKey: .baseMana)
+        baseAttackMax = try container.decode(Double.self, forKey: .baseAttackMax)
+        moveSpeed = try container.decode(Double.self, forKey: .moveSpeed)
+        baseAttackMin = try container.decode(Double.self, forKey: .baseAttackMin)
+        baseArmor = try container.decode(Double.self, forKey: .baseArmor)
         super.init()
     }
     

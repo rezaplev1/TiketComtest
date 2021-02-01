@@ -98,6 +98,7 @@ extension HeroListViewController: UICollectionViewDelegate, UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let hero = vm.herosByRole?[indexPath.item] {
             let vc = HeroDetailVewController()
+            vc.vm.hero = hero
             navigationController?.pushViewController(vc, animated: true)
         }
         
