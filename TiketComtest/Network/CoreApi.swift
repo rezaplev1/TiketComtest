@@ -65,14 +65,14 @@ class CoreApi : NSObject {
                     switch error {
                     case .sessionTaskFailed(let urlError as URLError) where urlError.code == .timedOut:
                         print("Request timeout!")
-//                        NotificationCenter.default.post(name: .notificationSlowInternetConnection, object: nil, userInfo: nil)
+                        self.delegate?.failed(interFace: self, result: "Slow Internet Connection" as AnyObject)
                     default:
                         print("Other error!")
                     }
                 }
                 
             } else {
-//                NotificationCenter.default.post(name: .notificationNoInternetConnection, object: nil, userInfo: nil)
+                self.delegate?.failed(interFace: self, result: "No Internet Connection" as AnyObject)
             }
         }
     }

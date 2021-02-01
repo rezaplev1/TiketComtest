@@ -45,7 +45,8 @@ class HeroListViewController: UIViewController {
         view.addSubview(collectionView)
         
         rolesView.snp.makeConstraints { (make) in
-            make.top.left.bottom.equalTo(view.safeAreaLayoutGuide)
+            make.top.bottom.equalTo(view.safeAreaLayoutGuide)
+            make.left.equalTo(view.safeAreaLayoutGuide).offset(8)
             make.width.equalTo(150)
         }
         
@@ -108,15 +109,16 @@ extension HeroListViewController: UICollectionViewDelegate, UICollectionViewData
 
 // MARK: - HeroViewModelDelegate
 extension HeroListViewController: HeroViewModelDelegate {
+    
+    func failedReq(message: String) {
+        simpleAlert(message: message)
+    }
+    
     func success() {
         collectionView.reloadData()
         if let roles = vm.rolesHero {
             rolesView.createListCategory(roles: roles)
         }
-    }
-    
-    func failedReq() {
-        
     }
 }
 

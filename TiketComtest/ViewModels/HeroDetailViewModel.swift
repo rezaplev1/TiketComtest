@@ -14,26 +14,25 @@ class HeroDetailViewModel: BaseViewModel {
     var similarHeros: HerosModel? {
         
         if let heros = RealmManager.shared.heroModel {
-            let filteredAttrHeros = heros.filter{$0.primaryAttr.contains(self.hero.primaryAttr)}
-            
+            let filteredAttrHeros = heros.filter{$0.primaryAttr.contains(self.hero.primaryAttr)}.filter{$0.id != self.hero.id}
             switch hero.primaryAttr {
             case "agi":
                 let filteredHeros = filteredAttrHeros.sorted {
                     $0.moveSpeed > $1.moveSpeed
                 }
-                return Array(filteredHeros)
+                return Array(filteredHeros.prefix(3))
                 
             case "str":
                 let filteredHeros = filteredAttrHeros.sorted {
                     $0.baseAttackMax > $1.baseAttackMax
                 }
-                return Array(filteredHeros)
+                return Array(filteredHeros.prefix(3))
                 
             case "int":
                 let filteredHeros = filteredAttrHeros.sorted {
                     $0.baseMana > $1.baseMana
                 }
-                return Array(filteredHeros)
+                return Array(filteredHeros.prefix(3))
             default:
                 break
             }

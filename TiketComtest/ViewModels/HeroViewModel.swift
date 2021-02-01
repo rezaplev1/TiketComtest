@@ -9,7 +9,7 @@ import Foundation
 
 protocol HeroViewModelDelegate: class {
     func success()
-    func failedReq()
+    func failedReq(message: String)
     
 }
 
@@ -32,7 +32,7 @@ class HeroViewModel: BaseViewModel {
         if let heros = herosByRole {
             let roles : [String] = heros.flatMap{Array($0.roles)}
             var result = Array(Set(roles)).sorted()
-            result.append("All")
+            result.append(Constants.AllRole)
             return result
         }
         return nil
@@ -50,7 +50,7 @@ class HeroViewModel: BaseViewModel {
         do {
             switch interFace.serviceConfig {
             case .getHeroStats:
-                let response = try JSONDecoder().decode([HeroModel].self, from: data)
+                let response = try JSONDecoder().decode(HerosModel.self, from: data)
                 print(response)
                 RealmManager.shared.deleteAllDataForObject(HeroModel.self)
                 RealmManager.shared.add(response)
@@ -59,19 +59,16 @@ class HeroViewModel: BaseViewModel {
                 break
             }
         }  catch _ {
-            
+            delegate?.failedReq(message: "Error mapping data")
         }
     }
     
     override func failed(interFace: CoreApi, result: AnyObject) {
-        
-        //        do {
-        //            let response = try JSONDecoder().decode(DefaultError.self, from: result as? Data ?? Data())
-        //            delegate?.failedReq(message: response.message ?? "Terjadi kesalahan")
-        
-        //        }  catch _ {
-        //            delegate?.failedReq(message: "Terjadi kesalahan")
-        //        }
+        if let response = result as? String {
+            delegate?.failedReq(message: response)
+        }else{
+            delegate?.failedReq(message: "something went wrong")
+        }
     }
 }
 

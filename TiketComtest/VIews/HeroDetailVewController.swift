@@ -295,11 +295,7 @@ class HeroDetailVewController: UIViewController {
             
             let imgSizeConstant: CGFloat = UIScreen.main.bounds.width * 0.1
             var leftConstant: CGFloat = 16
-            for (index, item) in similarHeros.enumerated()  {
-                if index == 3 {
-                    return
-                }
-                
+            for item in similarHeros {
                 let heroImg: UIImageView = {
                     let img = UIImageView()
                     img.contentMode = .scaleAspectFit
@@ -329,23 +325,14 @@ class HeroDetailVewController: UIViewController {
         let linkImage = Constants.BASE_URL + vm.hero.img
         let imageUrl = URL(string: linkImage)
         heroImg.sd_setImage(with: imageUrl, placeholderImage: UIImage(), options: .highPriority, completed: nil)
-        
         typeImg.image = UIImage(named: "\(vm.hero.attackType.lowercased())")
-        
         titleLbl.text = vm.hero.localizedName
-        
         listRoleLbl.text = vm.hero.roles.joined(separator: " ")
-        
         attackLbl.text = "\(vm.hero.baseAttackMin.clean) - \(vm.hero.baseAttackMax.clean)"
-        
         armorLbl.text = "\(vm.hero.baseArmor)"
-        
         speedLbl.text = "\(vm.hero.moveSpeed.clean)"
-        
         healthLbl.text = "\(vm.hero.baseHealth.clean)"
-        
         manaLbl.text = "\(vm.hero.baseMana.clean)"
-        
         attributeLbl.text = vm.hero.primaryAttr
     }
     
