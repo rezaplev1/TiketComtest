@@ -192,6 +192,7 @@ class HeroDetailVewController: UIViewController {
         heroImg.snp.makeConstraints { make in
             make.top.left.equalTo(view.safeAreaLayoutGuide)
             make.size.lessThanOrEqualTo(imgWidthHeightConstant)
+            make.height.greaterThanOrEqualTo(140)
         }
         
         typeImg.snp.makeConstraints { make in

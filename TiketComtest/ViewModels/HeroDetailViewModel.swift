@@ -15,27 +15,28 @@ class HeroDetailViewModel: BaseViewModel {
         
         if let heros = RealmManager.shared.heroModel {
             let filteredAttrHeros = heros.filter{$0.primaryAttr.contains(self.hero.primaryAttr)}
-            if hero.primaryAttr == "agi" {
+            
+            switch hero.primaryAttr {
+            case "agi":
                 let filteredHeros = filteredAttrHeros.sorted {
                     $0.moveSpeed > $1.moveSpeed
                 }
                 return Array(filteredHeros)
-            }
-            
-            if hero.primaryAttr == "str" {
+                
+            case "str":
                 let filteredHeros = filteredAttrHeros.sorted {
                     $0.baseAttackMax > $1.baseAttackMax
                 }
                 return Array(filteredHeros)
-            }
-            
-            if hero.primaryAttr == "int" {
+                
+            case "int":
                 let filteredHeros = filteredAttrHeros.sorted {
                     $0.baseMana > $1.baseMana
                 }
                 return Array(filteredHeros)
+            default:
+                break
             }
-            
         }
         return nil
     }
